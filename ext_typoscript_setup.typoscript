@@ -1,0 +1,7 @@
+plugin.tx_form.settings.yamlConfigurations {
+	1704442017 = EXT:form_after_submit/Configuration/Yaml/BaseSetup.yaml
+}
+module.tx_form.settings.yamlConfigurations {
+	1704442017 = EXT:form_after_submit/Configuration/Yaml/BaseSetup.yaml
+}
+

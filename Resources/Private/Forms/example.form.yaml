@@ -1,0 +1,59 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: form-after-submit
+label: Form after submit
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: Form after submit example
+      recipients:
+        'service@passionweb.de': 'PassionWeb'
+      senderAddress: '{email}'
+      senderName: '{fullname}'
+      addHtmlPart: true
+      attachUploads: false
+      translation:
+        language: Default
+      title: 'Form after submit example'
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '1'
+      additionalParameters: ''
+      fragment: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label:
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: fullname
+        label: Fullname
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email
+        label: 'Email address'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: message
+        label: Message
